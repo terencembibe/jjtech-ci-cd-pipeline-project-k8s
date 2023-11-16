@@ -16,7 +16,7 @@ pipeline {
     stage('Git Checkout') {
       steps {
         echo 'Cloning the application code...'
-        git branch: 'main', url: 'https://github.com/anselmenumbisia/jjtech-ci-cd-pipeline-project-k8s.git'
+        git branch: 'main', url: 'https://github.com/terencembibe/jjtech-ci-cd-pipeline-project-k8s.git'
       }
     }
 
@@ -113,7 +113,7 @@ pipeline {
 
     stage('Build and Push Docker Image') {
       environment {
-        awsAccountId = '389029577690'
+        awsAccountId = '714700021895'
         region = 'us-east-1'
         repositoryName = 'jjtech-demo'
         dockerImageTag = "${BUILD_NUMBER}"
